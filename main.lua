@@ -8,12 +8,7 @@ function love.load()
 	corner_counter = -1
 end
 
-function love.draw()
-	love.graphics.draw(logo, x, y, 0, 0.5, 0.5)
-	love.graphics.print("Corner: " .. corner_counter, 0, 555)
-	love.graphics.print("Bounces: " .. hit_counter, 0, 570)
-	love.graphics.print("x: " .. x .. ", y: " .. y, 0, 585)
-
+function love.update()
 	if x == 0 then
 		speedx = 5
 		hit_counter = hit_counter + 1
@@ -35,4 +30,12 @@ function love.draw()
 
 	x = x + speedx
 	y = y + speedy
+end
+
+function love.draw()
+	love.graphics.draw(logo, x, y, 0, 0.5, 0.5)
+	love.graphics.print("Corner: " .. corner_counter, 0, 555)
+	love.graphics.print("Bounces: " .. hit_counter, 0, 570)
+	love.graphics.print("x: " .. x .. ", y: " .. y, 0, 585)
+
 end
