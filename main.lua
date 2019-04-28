@@ -2,12 +2,10 @@ function love.load()
 	logo = love.graphics.newImage("dvd-logo.png")
 	width, height = love.graphics.getDimensions()
 	logo_width, logo_height = logo:getDimensions()
-	posx = 0
-	posy = 0
+	posx, posy = 0, 0
 	speedx = 5
 	speedy = speedx * 0.8
-	hit_counter = 0
-	corner_counter = 0
+	hit_counter, corner_counter = 0, 0
 end
 
 function love.update()
