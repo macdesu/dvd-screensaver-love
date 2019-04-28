@@ -4,7 +4,7 @@ function love.load()
 	logo_width, logo_height = logo:getDimensions()
 	posx = 0
 	posy = 0
-	speedx = 10
+	speedx = 5
 	speedy = speedx * 0.8
 	hit_counter = 0
 	corner_counter = 0
@@ -24,7 +24,7 @@ function love.update()
 		hit_counter = hit_counter + 1
 	end
 
-	if posx <= 0 and posy <= 0 or posx >= width - logo_width / 2 and posy <= 0 then
+	if posx <= 0 and posy <= 0 or posx >= width - (logo_width / 2) and posy <= 0 then
 		corner_counter = corner_counter + 1
 	end
 end
