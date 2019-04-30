@@ -1,1 +1,1 @@
-# learing-love2d
+# learning-love2d
