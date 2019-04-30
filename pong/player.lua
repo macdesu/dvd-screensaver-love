@@ -1,5 +1,6 @@
 function player_init()
 	player1, player2 = {}, {}
+	player1.score, player2.score = 0, 0
 	player1.x, player1.y = 8, height / 2
 	player2.x, player2.y = width - 24, player1.y
 	player1.width, player1.height = scale, scale * 6

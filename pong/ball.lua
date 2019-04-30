@@ -2,8 +2,8 @@ require "player"
 
 function ball_init()
 	ball = {}
-	ball.x, ball.y, ball.speedx, ball.speedy = 0, 0, 5, 5
 	ball.width, ball.height = scale, scale
+	ball.x, ball.y, ball.speedx, ball.speedy = ball.width + 5, ball.height + 5, speed, speed
 end
 
 function ball_update()
@@ -15,7 +15,6 @@ function ball_update()
 	if ball.x < player1.x + player1.width and ball.y > player1.y and ball.y < player1.y + player1.height
 	or ball.x + ball.width > player2.x and ball.y > player2.y and ball.y < player2.y + player2.height
 	then
-		love.graphics.print("bump")
 		ball.speedx = -ball.speedx
 	elseif ball.y <= 0 or ball.y >= height - (ball.height / 2)
 	then

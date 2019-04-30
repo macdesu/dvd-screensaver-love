@@ -1,11 +1,12 @@
 require "input"
 require "ball"
 require "player"
+require "score"
 
 function love.load()
 	width, height = love.graphics.getDimensions()
 	scale = 16
-	speed = 5
+	speed = 8
 	ball_init()
 	player_init()
 end
@@ -22,4 +23,5 @@ function love.draw()
 	love.graphics.rectangle("fill", ball.x, ball.y, ball.width, ball.height)
 	love.graphics.rectangle("fill", player1.x, player1.y, player1.width, player1.height)
 	love.graphics.rectangle("fill", player2.x, player2.y, player2.width, player2.height)
+	score()
 end
